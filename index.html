@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Informasi Desa</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .navbar {
+        background-color: #2b7c85;
+        border-bottom: 2px solid black;
+      }
+      .navbar-nav .nav-link,
+      .navbar-nav .dropdown-item,
+      .navbar-brand {
+        transition: all 0.3s ease-in-out;
+      }
+      .navbar-nav .nav-link:hover {
+        color: white !important;
+        opacity: 0.8;
+        transform: translateY(-2px);
+      }
+      .navbar-nav .dropdown-item:hover {
+        background-color: #2b7c85;
+        color: white;
+        transform: translateX(5px);
+      }
+      .navbar-brand:hover {
+        opacity: 0.8;
+        transform: scale(1.05);
+      }
+      .hero-section {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("ASPAR01.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+      }
+      .menu-card {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s;
+        margin: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .menu-card:hover {
+        transform: translateY(-5px);
+      }
+      .menu-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+      }
+      .typing-animation {
+        overflow: hidden;
+        border-right: 2px solid white;
+        white-space: nowrap;
+        margin: 0 auto;
+        animation: 
+          typing 7s steps(21, end) infinite,
+          blink-caret .85s step-end infinite;
+        width: 0;
+      }
+
+      @keyframes typing {
+        0% { width: 0 }
+        50% { width: 100% }
+        100% { width: 0 }
+      }
+
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: white; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <i class="fas fa-home"></i>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Profil</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Sejarah Desa</a></li>
+                <li><a class="dropdown-item" href="#">Visi dan Misi</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Struktur Organisasi</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Perangkat Desa</a></li>
+                <li><a class="dropdown-item" href="#">Lembaga Desa</a></li>
+                <li><a class="dropdown-item" href="#">Potensi Desa</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Demografi</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Data Penduduk</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Statistik Penduduk</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Pendidikan</a></li>
+                <li><a class="dropdown-item" href="#">Pekerjaan</a></li>
+                <li><a class="dropdown-item" href="#">Agama</a></li>
+                <li><a class="dropdown-item" href="#">Kelompok Umur</a></li>
+                <li><a class="dropdown-item" href="#">Wilayah Dusun</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Informasi</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Berita Desa</a></li>
+                <li><a class="dropdown-item" href="#">Pengumuman</a></li>
+                <li><a class="dropdown-item" href="#">Agenda Kegiatan</a></li>
+                <li><a class="dropdown-item" href="#">Program Desa</a></li>
+                <li><a class="dropdown-item" href="#">Peraturan Desa</a></li>
+                <li><a class="dropdown-item" href="#">APBDes</a></li>
+                <li><a class="dropdown-item" href="#">Laporan Realisasi</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Fasilitas</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Pendidikan</a></li>
+                <li><a class="dropdown-item" href="#">Kesehatan</a></li>
+                <li><a class="dropdown-item" href="#">Tempat Ibadah</a></li>
+                <li><a class="dropdown-item" href="#">Olahraga</a></li>
+                <li><a class="dropdown-item" href="#">Transportasi</a></li>
+                <li><a class="dropdown-item" href="#">Ekonomi</a></li>
+                <li><a class="dropdown-item" href="#">Keamanan</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Indeks Desa</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >IDM (Indeks Desa Membangun)</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >IKS (Indeks Ketahanan Sosial)</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >IKE (Indeks Ketahanan Ekonomi)</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >IKL (Indeks Ketahanan Lingkungan)</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="#">Status IDM</a></li>
+                <li><a class="dropdown-item" href="#">Skor IDM</a></li>
+                <li><a class="dropdown-item" href="#">Target IDM</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Layanan</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Surat Online</a></li>
+                <li><a class="dropdown-item" href="#">Pengaduan</a></li>
+                <li><a class="dropdown-item" href="#">Perizinan</a></li>
+                <li><a class="dropdown-item" href="#">Bantuan Sosial</a></li>
+                <li><a class="dropdown-item" href="#">Vaksinasi</a></li>
+                <li><a class="dropdown-item" href="#">UMKM</a></li>
+                <li><a class="dropdown-item" href="#">Konsultasi</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Galeri</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <img
+        src="LOGO (2).png"
+        alt="Logo Desa"
+        style="width: 90px; margin-bottom: 20px"
+      />
+      <div style="width: 700px"> <!-- Mengubah lebar container menjadi lebih kecil -->
+        <h1 class="typing-animation">SISTEM INFORMASI DESA TAMPAANG</h1> <!-- Mengubah teks menjadi lebih pendek -->
+      </div>
+      <p>Kec. tangaya Kab. Pangkep</p>
+
+      <!-- Search Bar -->
+      <div class="container mt-5">
+        <div class="row justify-content-center">
+          <div class="col-md-2">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Cari..." />
+              <button class="btn btn-light" type="button">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Menu Cards -->
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-3 col-6">
+          <div class="menu-card">
+            <img src="ICONPETA.png" alt="Peta Desa" class="menu-icon" />
+            <h5>Peta Desa</h5>
+          </div>
+        </div>
+        <!-- ICON PETA -->
+        <div class="col-md-3 col-6">
+          <div class="menu-card">
+            <img src="hukum-icon.png" alt="Produk Hukum" class="menu-icon" />
+            <h5>Produk Hukum</h5>
+          </div>
+        </div>
+
+         <div class="col-md-3 col-6">
+          <div class="menu-card">
+            <img src="hukum-icon.png" alt="Produk Hukum" class="menu-icon" />
+            <h5>Produk Hukum</h5>
+          </div>
+
+        </div>Tambahkan card menu lainnya sesuai kebutuhan
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+  </body>
+</html>
